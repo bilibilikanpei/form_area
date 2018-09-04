@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>表单域</title>
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+		<!-- react包引入 -->
+		<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+		<!-- 生产环境中不建议使用 -->
+		<script src="https://cdn.bootcss.com/babel-standalone/6.26.0/babel.min.js"></script>
+		<!--md5引入-->
+		<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js"></script>  
+	</head>
+
+	<body>
+
+		<div class="container">
+			<div class="note">
+				<h5>form_1</h5> 使用原生form、input标签。 form表单提交后会刷新页面
+			</div>
+			<form action="login" method="POST" name="form_1" id="form_1">
+				<input type="text" name="account" class="account" />
+				<input type="password" name="password" class="password" />
+				<input type="submit" class="submitBtn" value="提交" />
+			</form>
+		</div>
+
+		<div class="container">
+			<div class="note">
+				<h5>form_2</h5> 使用原生ajax避免页面刷新，且获得返回信息
+			</div>
+			<form action="login" method="POST" name="form_2" id="form_2">
+				<input type="text" name="account" class="account" />
+				<input type="password" name="password" class="password" />
+				<button type="button" class="registerBtn" onclick="register_2()">注册</button>
+				<button type="button" class="submitBtn" onclick="logIn_2()">登陆</button>
+			</form>
+		</div>
+
+		<div class="container">
+			<div class="note">
+				<h5>form_3</h5> 使用jQuery实现表单提交
+			</div>
+			<form action="login" method="POST" name="form_3" id="form_3">
+				<input type="text" name="account" class="account" />
+				<input type="password" name="password" class="password" />
+				<button type="button" class="registerBtn" onclick="register_3()">注册</button>
+				<button type="button" class="submitBtn" onclick="logIn_3()">提交</button>
+			</form>
+		</div>
+
+		<div class="container" id="reactRoot">
+
+		</div>
+
+		<div class="container">
+			<div class="note">
+				<h5>form_5</h5> 使用fetch实现表单提交
+			</div>
+			<form action="login" method="POST" name="form_5" id="form_5">
+				<input type="text" name="account" class="account" />
+				<input type="password" name="password" class="password" />
+				<button type="button" class="registerBtn" onclick="register_5()">注册</button>
+				<button type="button" class="submitBtn" onclick="logIn_5()">提交</button>
+			</form>
+		</div>
+
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="index.js" type="text/babel"></script>
+
+	</body>
+
+</html>
